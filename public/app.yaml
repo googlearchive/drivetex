@@ -1,0 +1,86 @@
+# Copyright 2015 Google Inc. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+application: drivetex
+version: 2
+runtime: python27
+api_version: 1
+threadsafe: true
+
+default_expiration: "1h"
+
+handlers:
+
+# re-direct to index.html if no path is given
+- url: /
+  static_files: index.html
+  upload: index.html
+  secure: always
+
+- url: /favicon.ico
+  static_files: resources/favicon.ico
+  upload: resources/favicon.ico
+  expiration: "7d"
+
+- url: /(.*\.css)
+  mime_type: text/css
+  static_files: \1
+  upload: (.*\.css)
+  secure: always
+
+- url: /(.*\.html)
+  mime_type: text/html
+  static_files: \1
+  upload: (.*\.html)
+  secure: always
+
+- url: /(.*\.js)
+  mime_type: text/javascript
+  static_files: \1
+  upload: (.*\.js)
+  secure: always
+
+- url: /(.*\.ico)
+  mime_type: image/x-icon
+  static_files: \1
+  upload: (.*\.ico)
+  expiration: "1d"
+
+- url: /(.*\.(svg|svgz))
+  mime_type: images/svg+xml
+  static_files: \1
+  upload: (.*\.(svg|svgz))
+  secure: always
+
+- url: /(.*\.txt)
+  mime_type: text/plain
+  static_files: \1
+  upload: (.*\.txt)
+  secure: always
+
+# image files
+- url: /(.*\.(bmp|gif|ico|jpeg|jpg|png))
+  static_files: \1
+  upload: (.*\.(bmp|gif|ico|jpeg|jpg|png))
+  secure: always
+
+# access the static resources in the root directory
+- url: /(.*)
+  mime_type: application/octet-stream
+  static_files: \1
+  upload: (.*)
+  expiration: "0s"
+  http_headers:
+    Cache-Control: no-store, no-cache, must-revalidate
+  secure: always

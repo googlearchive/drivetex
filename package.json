@@ -1,0 +1,10 @@
+{
+  "name": "drivetex",
+  "version": "0.0.1",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-bowercopy": "~1.2.0",
+    "grunt-contrib-clean": "~0.6.0"
+  }
+}

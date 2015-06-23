@@ -1,0 +1,81 @@
+/* Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+body {
+  font-family: sans-serif;
+}
+
+[drawer] {
+  background-color: #565A5C;
+}
+
+core-menu {
+  color: #FFF;
+}
+
+core-header-panel {
+  background-color: #DDD;
+}
+
+core-toolbar {
+  background-color: #CFB87C;
+}
+
+#editor {
+  margin-left: 24px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+#editor paper-autogrow-textarea {
+  width: initial;
+  min-height: 10em;
+}
+
+#editor, #preview {
+  max-width: 60em;
+}
+
+#preview {
+  min-height: 90vh;
+  min-height: calc(100vh - 64px);
+}
+
+#compileProgress {
+  width: 100%;
+  position: fixed;
+  display: none;
+}
+
+textarea {
+  font-family: "Source Code Pro", monospace;
+}
+
+#generatePreviewButton {
+  position: fixed;
+  bottom: 16px;
+  left: 48%;
+  left: calc(50% - 16px);
+}
+
+@media screen and (max-width: 70em) {
+  #preview {
+    display: none;
+  }
+
+  #generatePreviewButton {
+    display: none;
+  }
+}
