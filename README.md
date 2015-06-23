@@ -15,8 +15,8 @@ A cloud LaTeX editor. Inspired by [LaTeX Lab][1] by Bobby Soares.
 
 ### Clean repo build
 
-* `grunt cleanDeps`
 * `npm install`
+* `grunt cleanDeps`
 * `grunt`
 
 ### Test locally
