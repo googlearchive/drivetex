@@ -12,6 +12,9 @@ A cloud LaTeX editor. Inspired by [LaTeX Lab][1] by Bobby Soares.
     * Ubuntu/Debian: `sudo apt-get install npm`
 * `sudo npm install -g bower grunt-cli http-server`
 * Install [Google Cloud SDK](https://cloud.google.com/sdk/)
+ * `gcloud auth login`
+ * `gcloud components update app`
+ * `gcloud config set project drivetex`
 
 ### Clean repo build
 
@@ -26,7 +29,7 @@ A cloud LaTeX editor. Inspired by [LaTeX Lab][1] by Bobby Soares.
 
 ### Deploy to App Engine
 
-* `appcfg.py update public/`
+* `gcloud preview app deploy public/app.yaml --version=2 --set-default`
 
 
 ## Open Source Credits
