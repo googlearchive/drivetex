@@ -10,7 +10,8 @@ A cloud LaTeX editor. Inspired by [LaTeX Lab][1] by Bobby Soares.
 * Install [npm](https://docs.npmjs.com/getting-started/installing-node)
     * Windows or Mac: Download [NodeJS](https://nodejs.org/download/)
     * Ubuntu/Debian: `sudo apt-get install npm`
-* `sudo npm install -g bower grunt-cli http-server`
+    * Depending on your system setup, you may want to reference [this StackOverflow answer](http://stackoverflow.com/a/21712034/587091) about installing NPM global packages without administrative priviledge and [this one](http://askubuntu.com/a/521571/129686) about `node: command not found`
+* `npm install -g bower grunt-cli http-server`
 * Install [Google Cloud SDK](https://cloud.google.com/sdk/)
  * `gcloud auth login`
  * `gcloud components update app`
