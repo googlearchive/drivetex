@@ -29,7 +29,7 @@ A cloud LaTeX editor. Inspired by [LaTeX Lab][1] by Bobby Soares.
 
 ### Deploy to App Engine
 
-* `gcloud preview app deploy public/app.yaml --version=2 --set-default`
+* `gcloud preview app deploy public/app.yaml --version=3 --promote`
 
 
 ## Open Source Credits
