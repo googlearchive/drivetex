@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
   driveApi = document.getElementById('driveApi');
   documentId = getParameterByName('gdriveid');
 
+  drawerPanel.forceNarrow = true;
   loadButton.addEventListener('click', function (e) {
     drawerPanel.closeDrawer();
     populateUI();
@@ -72,12 +73,16 @@ document.addEventListener('DOMContentLoaded', function () {
   editorTextArea.addEventListener('keydown', function (e) {
     dirtyBit = true;
   });
+  editorTextArea.bindValue = "\\documentclass{minimal}\n"
+                             + "\\begin{document}\n"
+                             + "Your \\LaTeX document goes here!\n"
+                             + "\\end{document}\n";
 
   window.onbeforeunload = function (e) {
     if (dirtyBit) {
       return 'You have unsaved changes.';
     }
-  }
+  };
 
   driveApi.addEventListener('google-api-load', onDriveApiLoad);
 });
@@ -177,12 +182,12 @@ var populateMetadata = function (driveResponse) {
 };
 
 var populateContent = function (driveResponse) {
-  editorTextArea.value = driveResponse.body;
-  editorEl.querySelector('paper-autogrow-textarea').update(editorTextArea);
+  editorTextArea.bindValue = driveResponse.body;
 };
 
 var saveAction = function () {
-  updateFile(documentId, documentMetadata, editorTextArea.value).then(saveSuccessful, saveFailed);
+  updateFile(documentId, documentMetadata, editorTextArea.bindValue)
+      .then(saveSuccessful, saveFailed);
 };
 
 var updateFile = function (fileId, fileMetadata, fileData) {
@@ -226,7 +231,7 @@ var saveFailed = function (response) {
 };
 
 var compile = function () {
-  var source_code = editorTextArea.value;
+  var source_code = editorTextArea.bindValue;
   var compileProgress = document.getElementById('compileProgress');
   compileProgress.style.display = 'block';
 

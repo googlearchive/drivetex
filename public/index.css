@@ -21,16 +21,18 @@ body {
   background-color: #565A5C;
 }
 
-core-menu {
-  color: #FFF;
+paper-menu {
+  --paper-menu-background-color: transparent;
+  --paper-menu-color: #FFF;
 }
 
-core-header-panel {
+paper-header-panel {
   background-color: #DDD;
 }
 
-core-toolbar {
-  background-color: #CFB87C;
+paper-toolbar {
+  --paper-toolbar-background: #CFB87C;
+  --paper-toolbar-color: #000;
 }
 
 #editor {
@@ -39,9 +41,17 @@ core-toolbar {
   margin-bottom: 8px;
 }
 
-#editor paper-autogrow-textarea {
-  width: initial;
+paper-material.card {
+  background-color: white;
+}
+
+#editor iron-autogrow-textarea {
+  width: 100%;
   min-height: 10em;
+  border: none;
+  --iron-autogrow-textarea: {
+    font-family: "Source Code Pro", monospace;
+  };
 }
 
 #editor, #preview {
@@ -64,6 +74,7 @@ textarea {
 }
 
 #generatePreviewButton {
+  --paper-fab-background: red;
   position: fixed;
   bottom: 16px;
   left: 48%;
