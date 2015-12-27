@@ -12,7 +12,7 @@ A cloud LaTeX editor. Live at [drivetex.appspot.com](https://drivetex.appspot.co
     * Ubuntu/Debian: `sudo apt-get install npm`
     * Depending on your system setup, you may want to reference [this StackOverflow answer](http://stackoverflow.com/a/21712034/587091) about installing NPM global packages without administrative priviledge and [this one](http://askubuntu.com/a/521571/129686) about `node: command not found`
 * `npm install -g bower grunt-cli http-server`
-* Install [Google Cloud SDK](https://cloud.google.com/sdk/)
+* Install [Google Cloud SDK](https://cloud.google.com/sdk/) (only needed for pushing to production)
  * `gcloud auth login`
  * `gcloud config set project drivetex`
 
