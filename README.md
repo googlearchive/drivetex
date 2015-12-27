@@ -1,5 +1,5 @@
 # DriveTeX
-A cloud LaTeX editor. Inspired by [LaTeX Lab][1] by Bobby Soares.
+A cloud LaTeX editor. Live at [drivetex.appspot.com](https://drivetex.appspot.com/). Inspired by [LaTeX Lab][1] by Bobby Soares.
 
 [1]: https://code.google.com/p/latex-lab/
 
