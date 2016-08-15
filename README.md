@@ -3,6 +3,19 @@ A cloud LaTeX editor. Live at [drivetex.appspot.com](https://drivetex.appspot.co
 
 [1]: https://code.google.com/p/latex-lab/
 
+## User Manual
+
+Right now, it's a little bit more difficult to get started with DriveTeX that it ought to be.
+
+1. Go to [drivetex.appspot.com](https://drivetex.appspot.com/). If this is your first visit, you'll be
+   prompted to authorize DriveTeX to access Google Drive files that you specifically give permission to access.
+2. Visit [drive.google.com](https://drive.google.com/). (If you just authorized DriveTeX, you might have to reload.)
+   Find a `.tex` file to edit, right click, "Open With" -> DriveTeX.
+3. Your file opens up in the DriveTeX editor. You can make changes, save and generate a preview.
+
+If you find that your situation doesn't work with DriveTeX (multiple source files, additional LaTeX plugins, etc.),
+let me know!
+
 ## Getting started with development
 
 ### One-time system setup
