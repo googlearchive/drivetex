@@ -1,3 +1,7 @@
+# Deprecated
+
+This sample is no longer maintained. No further updates will be made.
+
 # DriveTeX
 A cloud LaTeX editor. Live at [drivetex.appspot.com](https://drivetex.appspot.com/). Inspired by [LaTeX Lab][1] by Bobby Soares.
 
